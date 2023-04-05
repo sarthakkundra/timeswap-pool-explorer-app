@@ -1,6 +1,12 @@
 import React from 'react'
+import { ITransactionType } from '../../common/apiTypes'
 
-const TransactionDetailCard = () => {
+interface IComponentProps {
+    onClose: () => void;
+    transaction: ITransactionType
+}
+
+const TransactionDetailCard: React.FC<IComponentProps> = ({ onClose, transaction }) => {
     return (
         <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
   {/* <!--
@@ -28,8 +34,14 @@ const TransactionDetailCard = () => {
           To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
       --> */}
       <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-          <div className="bg-[#22283C]">
+          <div className="bg-[#22283C] flex flex-col">
               <h3 className="text-white font-bold text-lg">Transaction Details</h3>
+              <p className="text-sm text-bold text-white">{`Amount - ${transaction?.tokenAmount}`}</p>
+              <p className="text-sm text-bold text-white">{`Timestamp - ${transaction?.blockTimestamp}`}</p>
+              <p className="text-sm text-bold text-white">{`Strike - ${transaction?.strike}`}</p>
+              <p className="text-sm text-bold text-white">{`Maturity - ${transaction?.maturity}`}</p>
+              <p className="text-sm text-bold text-white">{`Token0 - ${transaction?.token0}`}</p>
+              <p className="text-sm text-bold text-white">{`Token1 - ${transaction?.token1}`}</p>
         </div>
       </div>
     </div>

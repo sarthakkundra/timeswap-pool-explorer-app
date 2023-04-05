@@ -8,6 +8,7 @@ import { configureChains, createClient, WagmiConfig } from 'wagmi'
 import { arbitrum, mainnet } from 'wagmi/chains'
 import { Web3Button } from '@web3modal/react'
 import AllTransactions from './pages/allTransactions'
+import "./moralisConfig.ts";
 
 // TODO :- Move this to a singleton class, project id to env
 const chains = [arbitrum, mainnet]
@@ -29,9 +30,11 @@ function App() {
     <>
     <WagmiConfig client={wagmiClient}>
     <div className="App">
-      <TransactionCard />
+      {/* <TransactionCard /> */}
       {/* <TransactionDetailCard /> */}
+      <div className="w-full">
       <AllTransactions />
+      </div>
     </div>
     </WagmiConfig>
     <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />

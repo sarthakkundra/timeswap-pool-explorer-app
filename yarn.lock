@@ -871,6 +871,134 @@
   resolved "https://registry.yarnpkg.com/@metamask/safe-event-emitter/-/safe-event-emitter-2.0.0.tgz#af577b477c683fad17c619a78208cede06f9605c"
   integrity sha512-/kSXhY692qiV1MXu6EeOZvg5nECLclxNXcKCxJ3cXQgYuRymRHpdx/t7JXfsK+JLjwA1e1c1/SBrlQYpusC29Q==
 
+"@moralisweb3/api-utils@^2.18.1":
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/@moralisweb3/api-utils/-/api-utils-2.18.1.tgz#9f9e8c8425ed2b6198203849771bfda62e901d51"
+  integrity sha512-40mppd+nIlXQ31LCe6J8l60jauvSv6BklXRpCS1o4skQgxU6j0Ecl9bIbnKOdGLHweLi08kTtRR3NIYb/qD8rA==
+  dependencies:
+    "@moralisweb3/common-core" "^2.18.1"
+    "@moralisweb3/common-evm-utils" "^2.18.1"
+    axios "^1.2.1"
+
+"@moralisweb3/aptos-api@^2.18.1":
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/@moralisweb3/aptos-api/-/aptos-api-2.18.1.tgz#a59998a40590f9cc17482426d53113142364c0f9"
+  integrity sha512-QJfF/0Oe/2J6BpCU4nL3yqzAM8dEC6ll7HcjpsQ7N7N/2brpXCpSAZW+U4ujXVqy1ugIFFH0ecFX/lzmAC9dCQ==
+  dependencies:
+    "@moralisweb3/api-utils" "^2.18.1"
+    "@moralisweb3/common-aptos-utils" "^2.18.1"
+    "@moralisweb3/common-core" "^2.18.1"
+
+"@moralisweb3/auth@^2.18.1":
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/@moralisweb3/auth/-/auth-2.18.1.tgz#eb1025ac8b0b4f92a13c8be671a9a2afb1257d25"
+  integrity sha512-b+cOi57atmCwqzpOKsw7F+y6psjaBP7lZ01aUYsgerNTO71A6NhcziqaiboyfoA9mhAUecFF/gCgqAl41SXnew==
+  dependencies:
+    "@moralisweb3/api-utils" "^2.18.1"
+    "@moralisweb3/common-aptos-utils" "^2.18.1"
+    "@moralisweb3/common-auth-utils" "^2.18.1"
+    "@moralisweb3/common-core" "^2.18.1"
+    "@moralisweb3/common-evm-utils" "^2.18.1"
+    "@moralisweb3/common-sol-utils" "^2.18.1"
+
+"@moralisweb3/common-aptos-utils@^2.18.1":
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/@moralisweb3/common-aptos-utils/-/common-aptos-utils-2.18.1.tgz#bcc7d589152f5a7ba12b2c52cb7f28f0fa90c5a7"
+  integrity sha512-cAJ2yDO8G6a2kwDiPwfk/v4f1NEeEAgKUPu6++n7aTZkVMlAdG0jFmiOZl3OdiLiMfMx9PKNrD1v3K5In7VZTw==
+  dependencies:
+    "@moralisweb3/common-core" "^2.18.1"
+    "@noble/hashes" "^1.2.0"
+
+"@moralisweb3/common-auth-utils@^2.18.1":
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/@moralisweb3/common-auth-utils/-/common-auth-utils-2.18.1.tgz#90b33c9e583b48b905161f76d7d98ea7a0e434b6"
+  integrity sha512-M2jGiHyb9VT6Qs0JYcAPzJaJDCGwoUx6H4nredmwLY/yqLW4TNEWc3S35kinU37e5Zuz9qrddgT9b4q+rd2OMA==
+  dependencies:
+    "@ethersproject/abi" "^5.7.0"
+    "@moralisweb3/common-aptos-utils" "^2.18.1"
+    "@moralisweb3/common-core" "^2.18.1"
+    "@moralisweb3/common-evm-utils" "^2.18.1"
+    "@moralisweb3/common-sol-utils" "^2.18.1"
+    "@moralisweb3/streams-typings" "^1.0.6"
+
+"@moralisweb3/common-core@^2.18.1":
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/@moralisweb3/common-core/-/common-core-2.18.1.tgz#f59fc44bb7e1913d7a2cf9adb147564181a03086"
+  integrity sha512-nqn6idEw1WoCNhrCywwTIHTQwm32g8OSyUjI4+3P1RgJW41vxwmHjrFS0lyrxVE+waQ0BZpmV5TmXeMBLm5vXQ==
+  dependencies:
+    axios "^1.2.1"
+
+"@moralisweb3/common-evm-utils@^2.18.1":
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/@moralisweb3/common-evm-utils/-/common-evm-utils-2.18.1.tgz#e9da73436f8f852ed7f5e2778839f48a0019c4d3"
+  integrity sha512-afIQMej/kZDU8wRcc5BhuG3ZY7/dpSlttXkYgKGfEWdRKfEbrUVLwvq9d8QYltxh6fl4iuZuXkLX3NwSNFTddQ==
+  dependencies:
+    "@ethersproject/address" "^5.7.0"
+    "@ethersproject/bytes" "^5.7.0"
+    "@ethersproject/transactions" "^5.7.0"
+    "@moralisweb3/common-core" "^2.18.1"
+
+"@moralisweb3/common-sol-utils@^2.18.1":
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/@moralisweb3/common-sol-utils/-/common-sol-utils-2.18.1.tgz#1b63fcc938d149c2a665189e73a06eed4aea8407"
+  integrity sha512-aW3n5fT3fC/iIz+eUYI0GZCFto00NjphHJN5c7MhLfn8m+kiCAOuwYC7jf4/WW+B0Sted7E9ZqOW9K2Yh7fqAQ==
+  dependencies:
+    "@moralisweb3/common-core" "^2.18.1"
+    bn.js "^5.2.1"
+    bs58 "^5.0.0"
+    buffer "^6.0.3"
+
+"@moralisweb3/common-streams-utils@^2.18.1":
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/@moralisweb3/common-streams-utils/-/common-streams-utils-2.18.1.tgz#0c351d7191f0001293f98dfdf83b530cd6e361af"
+  integrity sha512-nvmyHobrQ/8l8enSEYgPucb9ldgyorc9RS4TP6q0WQFlXSN8kVRq8Gsm8ge7Rq5gcMp1XumvXSIWuQbJ1MmrBw==
+  dependencies:
+    "@ethersproject/abi" "^5.7.0"
+    "@moralisweb3/common-aptos-utils" "^2.18.1"
+    "@moralisweb3/common-core" "^2.18.1"
+    "@moralisweb3/common-evm-utils" "^2.18.1"
+    "@moralisweb3/streams-typings" "^1.0.7"
+
+"@moralisweb3/evm-api@^2.18.1":
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/@moralisweb3/evm-api/-/evm-api-2.18.1.tgz#fd45cc61d7c88a7d92fcb946168840545cde366f"
+  integrity sha512-35OPi7zlxGinMq7QUrZjaXC2oRNEp9tNuiJEsJA8LPqoFEQKN5MFjL4FKDXK2sDtktsr8AqF1PW/WEDOAOwBPw==
+  dependencies:
+    "@moralisweb3/api-utils" "^2.18.1"
+    "@moralisweb3/common-core" "^2.18.1"
+    "@moralisweb3/common-evm-utils" "^2.18.1"
+
+"@moralisweb3/sol-api@^2.18.1":
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/@moralisweb3/sol-api/-/sol-api-2.18.1.tgz#2c05af8c2a44ce3d11997fa1f72842573882615a"
+  integrity sha512-IomiGFhtVLi1/eDEl7m0vHIeZE+9X6xHZLLRGADULprO65dw6nflUM2eNp1xSAgJhFmlQpwkxK36o1pG6dqRAA==
+  dependencies:
+    "@moralisweb3/api-utils" "^2.18.1"
+    "@moralisweb3/common-core" "^2.18.1"
+    "@moralisweb3/common-sol-utils" "^2.18.1"
+
+"@moralisweb3/streams-typings@^1.0.6", "@moralisweb3/streams-typings@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@moralisweb3/streams-typings/-/streams-typings-1.0.7.tgz#d8bec1f874f4a1db2f628bd389cd89a4d5736c09"
+  integrity sha512-ShbVqil0KLOTyTjO6z9JewPcVVE3S6kzkQFnW2flGBRsGdKucpkUdOx1HijOLoaikz/9gH92n+lzTvRFIj0AoA==
+
+"@moralisweb3/streams@^2.18.1":
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/@moralisweb3/streams/-/streams-2.18.1.tgz#52e58b59d1c361360a51ac738e73c7ff9c5076c1"
+  integrity sha512-Y7j34HYb1/S6CUpO+rjZ6uNfk8+sIGgSZk/WcEOVg0I7bwwBdTop3YlZCDFygpOqwKb/FMMtfqVePR7Z1DSEFQ==
+  dependencies:
+    "@ethersproject/abi" "^5.7.0"
+    "@ethersproject/bignumber" "^5.7.0"
+    "@ethersproject/sha2" "^5.7.0"
+    "@ethersproject/strings" "^5.7.0"
+    "@moralisweb3/api-utils" "^2.18.1"
+    "@moralisweb3/common-core" "^2.18.1"
+    "@moralisweb3/common-evm-utils" "^2.18.1"
+    "@moralisweb3/common-streams-utils" "^2.18.1"
+    "@moralisweb3/streams-typings" "^1.0.6"
+    ethereumjs-util "^7.1.0"
+    web3-eth-abi "^1.8.0"
+
 "@motionone/animation@^10.15.1":
   version "10.15.1"
   resolved "https://registry.yarnpkg.com/@motionone/animation/-/animation-10.15.1.tgz#4a85596c31cbc5100ae8eb8b34c459fb0ccf6807"
@@ -945,7 +1073,7 @@
   resolved "https://registry.yarnpkg.com/@noble/ed25519/-/ed25519-1.7.3.tgz#57e1677bf6885354b466c38e2b620c62f45a7123"
   integrity sha512-iR8GBkDt0Q3GyaVcIu7mSsVIqnFbkbRzGLWlvhwunacoLwt4J3swfKhfaM6rN6WY+TBGoYT1GtT1mIh2/jGbRQ==
 
-"@noble/hashes@^1.1.2":
+"@noble/hashes@^1.1.2", "@noble/hashes@^1.2.0":
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@noble/hashes/-/hashes-1.3.0.tgz#085fd70f6d7d9d109671090ccae1d3bec62554a1"
   integrity sha512-ilHEACi9DwqJB0pw7kv+Apvh50jiiSyR/cQ3y4W7lOR5mhvn/50FLUfsnfJz0BDZtl/RR16kXvptiv6q1msYZg==
@@ -2158,6 +2286,15 @@ axios@^0.21.0:
   dependencies:
     follow-redirects "^1.14.0"
 
+axios@^1.2.1:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.3.4.tgz#f5760cefd9cfb51fd2481acf88c05f67c4523024"
+  integrity sha512-toYm+Bsyl6VC5wSkfkbbNB6ROv7KY93PEBBL6xyDczaIHasAiv4wPqQ/c4RjoQzipxRD2W5g21cOqQulZ7rHwQ==
+  dependencies:
+    follow-redirects "^1.15.0"
+    form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
+
 babel-plugin-polyfill-corejs2@^0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/babel-plugin-polyfill-corejs2/-/babel-plugin-polyfill-corejs2-0.3.3.tgz#5d1bd3836d0a19e1b84bbf2d9640ccb6f951c122"
@@ -2200,6 +2337,11 @@ base-x@^3.0.2, base-x@^3.0.8:
   integrity sha512-H7JU6iBHTal1gp56aKoaa//YUxEaAOUiydvrV/pILqIHXTtqxSkATOnDA2u+jZ/61sD+L/412+7kzXRtWukhpQ==
   dependencies:
     safe-buffer "^5.0.1"
+
+base-x@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/base-x/-/base-x-4.0.0.tgz#d0e3b7753450c73f8ad2389b5c018a4af7b2224a"
+  integrity sha512-FuwxlW4H5kh37X/oW59pwTzzTKRzfrrQwhmyspRM7swOEZcHtDZSCt45U6oKgtuFE+WYPblePMVIPR4RZrh/hw==
 
 base64-js@^1.3.1:
   version "1.5.1"
@@ -2382,6 +2524,13 @@ bs58@^4.0.0, bs58@^4.0.1:
   integrity sha512-Ok3Wdf5vOIlBrgCvTq96gBkJw+JUEzdBgyaza5HLtPm7yTHkjRy8+JzNyHF7BHa0bNWOQIp3m5YF0nnFcOIKLw==
   dependencies:
     base-x "^3.0.2"
+
+bs58@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/bs58/-/bs58-5.0.0.tgz#865575b4d13c09ea2a84622df6c8cbeb54ffc279"
+  integrity sha512-r+ihvQJvahgYT50JD05dyJNKlmmSlMoOGwn1lCcEzanPglg7TxYjioQUYehQ9mAR/+hOSd2jRc/Z2y5UxBymvQ==
+  dependencies:
+    base-x "^4.0.0"
 
 bs58check@^2.1.2:
   version "2.1.2"
@@ -2676,7 +2825,7 @@ color-name@^1.1.4, color-name@~1.1.4:
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
-combined-stream@^1.0.6, combined-stream@~1.0.6:
+combined-stream@^1.0.6, combined-stream@^1.0.8, combined-stream@~1.0.6:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/combined-stream/-/combined-stream-1.0.8.tgz#c3d45a8b34fd730631a110a8a2520682b31d5a7f"
   integrity sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==
@@ -3792,7 +3941,7 @@ flat@^5.0.2:
   resolved "https://registry.yarnpkg.com/flat/-/flat-5.0.2.tgz#8ca6fe332069ffa9d324c327198c598259ceb241"
   integrity sha512-b6suED+5/3rTpUBdG1gupIl8MPFCAMA0QXwmljLhvCUKcUvdE4gWky9zpuGCcXHOsz4J9wPGNWq6OKpmIzz3hQ==
 
-follow-redirects@^1.14.0:
+follow-redirects@^1.14.0, follow-redirects@^1.15.0:
   version "1.15.2"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
   integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
@@ -3813,6 +3962,15 @@ form-data-encoder@1.7.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/form-data-encoder/-/form-data-encoder-1.7.1.tgz#ac80660e4f87ee0d3d3c3638b7da8278ddb8ec96"
   integrity sha512-EFRDrsMm/kyqbTQocNvRXMLjc7Es2Vk+IQFx/YW7hkUH1eBl4J1fqiP34l74Yt0pFLCNpc06fkbVk00008mzjg==
+
+form-data@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/form-data/-/form-data-4.0.0.tgz#93919daeaf361ee529584b9b31664dc12c9fa452"
+  integrity sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==
+  dependencies:
+    asynckit "^0.4.0"
+    combined-stream "^1.0.8"
+    mime-types "^2.1.12"
 
 form-data@~2.3.2:
   version "2.3.3"
@@ -4862,6 +5020,24 @@ mock-fs@^4.1.0:
   resolved "https://registry.yarnpkg.com/mock-fs/-/mock-fs-4.14.0.tgz#ce5124d2c601421255985e6e94da80a7357b1b18"
   integrity sha512-qYvlv/exQ4+svI3UOvPUpLDF0OMX5euvUH0Ny4N5QyRyhNdgAgUrVH3iUINSzEPLvx0kbo/Bp28GJKIqvE7URw==
 
+moralis@^2.18.1:
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/moralis/-/moralis-2.18.1.tgz#a5a8469fc609a285c89ce73243fb3b90ae49216a"
+  integrity sha512-IL3kL1tlxHCznSmv82ckue4iy8OUpjt0cQO+/GwD4uX6F8FfU4X3QyUlliyYUHbxu2RWD+3DzvPBUuxXPiJ0Bg==
+  dependencies:
+    "@moralisweb3/api-utils" "^2.18.1"
+    "@moralisweb3/aptos-api" "^2.18.1"
+    "@moralisweb3/auth" "^2.18.1"
+    "@moralisweb3/common-auth-utils" "^2.18.1"
+    "@moralisweb3/common-core" "^2.18.1"
+    "@moralisweb3/common-evm-utils" "^2.18.1"
+    "@moralisweb3/common-sol-utils" "^2.18.1"
+    "@moralisweb3/common-streams-utils" "^2.18.1"
+    "@moralisweb3/evm-api" "^2.18.1"
+    "@moralisweb3/sol-api" "^2.18.1"
+    "@moralisweb3/streams" "^2.18.1"
+    "@moralisweb3/streams-typings" "^1.0.6"
+
 motion@10.15.5:
   version "10.15.5"
   resolved "https://registry.yarnpkg.com/motion/-/motion-10.15.5.tgz#d336ddbdd37bc28bb99fbb243fe309df6c685ad6"
@@ -5367,6 +5543,11 @@ proxy-compare@2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/proxy-compare/-/proxy-compare-2.5.0.tgz#0387c5e4d283ba9b1c0353bb20def4449b06bbd2"
   integrity sha512-f1us0OsVAJ3tdIMXGQx2lmseYS4YXe4W+sKF5g5ww/jV+5ogMadPt+sIZ+88Ga9kvMJsrRNWzCrKPpr6pMWYbA==
+
+proxy-from-env@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
+  integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 
 prr@~1.0.1:
   version "1.0.1"
@@ -6514,7 +6695,7 @@ web3-core@1.9.0:
     web3-core-requestmanager "1.9.0"
     web3-utils "1.9.0"
 
-web3-eth-abi@1.9.0:
+web3-eth-abi@1.9.0, web3-eth-abi@^1.8.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/web3-eth-abi/-/web3-eth-abi-1.9.0.tgz#18662ef68bd3d25eedd9a1a1484089c39529c652"
   integrity sha512-0BLQ3FKMrzJkA930jOX3fMaybAyubk06HChclLpiR0NWmgWXm1tmBrJdkyRy2ZTZpmfuZc9xTFRfl0yZID1voA==
