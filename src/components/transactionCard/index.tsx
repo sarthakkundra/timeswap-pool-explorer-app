@@ -21,7 +21,7 @@ const TransactionCard: React.FC<IComponentProps> = ({ transaction, addressTokenM
             )}
         </div>
         {showTxDetailCard && (
-            <TransactionDetailCard onClose={() => setShowTxDetailCard(false)} transaction={transaction}/>
+            <TransactionDetailCard onClose={() => setShowTxDetailCard(false)} transaction={transaction} addressTokenMap={addressTokenMap}/>
         )}
         </>
     )
