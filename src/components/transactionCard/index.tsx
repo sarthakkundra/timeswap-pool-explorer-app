@@ -17,7 +17,7 @@ const TransactionCard: React.FC<IComponentProps> = ({ transaction, addressTokenM
                 {formatTxHash(transaction?.transactionHash)}
             </p>
             {addressTokenMap && (
-            <p className="text-md text-white font-bold">{transaction?.isToken0 ? addressTokenMap.get(transaction?.token0) : addressTokenMap.get(transaction?.token0)}</p>
+            <p className="text-md text-white font-bold">{transaction?.isToken0 ? addressTokenMap.get(transaction?.token0) : addressTokenMap.get(transaction?.token1)}</p>
             )}
         </div>
         {showTxDetailCard && (
