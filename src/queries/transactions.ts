@@ -3,7 +3,7 @@ import gql from "graphql-tag";
 export const LEND_AND_BORROW_TRANSACTIONS = gql`
 	query LendAndBorrowTransactions($poolAdd: String, $skip: Int) {
 		lendGivenPrincipals(
-			first: 5
+			first: 4
 			skip: $skip
 			where: { poolPairAddress: $poolAdd }
 		) {
@@ -20,7 +20,7 @@ export const LEND_AND_BORROW_TRANSACTIONS = gql`
 			blockTimestamp
 		}
 		borrowGivenPrincipals(
-			first: 5
+			first: 4
 			skip: $skip
 			where: { poolPairAddress: $poolAdd }
 		) {
@@ -45,7 +45,7 @@ export const LEND_AND_BORROW_TRANSACTIONS_BY_USER = gql`
 		$skip: Int
 	) {
 		lendGivenPrincipals(
-			first: 5
+			first: 4
 			skip: $skip
 			where: { poolPairAddress: $poolAdd, from: $address }
 		) {
@@ -63,7 +63,7 @@ export const LEND_AND_BORROW_TRANSACTIONS_BY_USER = gql`
 			blockTimestamp
 		}
 		borrowGivenPrincipals(
-			first: 5
+			first: 4
 			skip: $skip
 			where: { poolPairAddress: $poolAdd, from: $address }
 		) {

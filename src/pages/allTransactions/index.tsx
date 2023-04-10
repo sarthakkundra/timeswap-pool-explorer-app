@@ -57,8 +57,8 @@ const AllTransactions: React.FC<IComponentProps> = ({
 		}
 	}, [data, showUserInitiatedTxs]);
 	return (
-		<>
-			<div className='flex w-full'>
+		<div className="my-2">
+			<div className='flex w-screen'>
 				<div className='flex flex-col justify-between items-center w-10/12'>
 					<h3 className='text-lg font-bold text-white'>Lend Transactions</h3>
 					<ul className="w-full">
@@ -86,7 +86,7 @@ const AllTransactions: React.FC<IComponentProps> = ({
 					</ul>
 				</div>
 			</div>
-			<div className='w-full flex justify-between'>
+			<div className='w-10/12 flex justify-around'>
 				<button
 					className='bg-black py-1 px-4 text-white font-bold rounded-md'
 					onClick={() => {
@@ -107,7 +107,7 @@ const AllTransactions: React.FC<IComponentProps> = ({
 					Next
 				</button>
 			</div>
-		</>
+		</div>
 	);
 };
 

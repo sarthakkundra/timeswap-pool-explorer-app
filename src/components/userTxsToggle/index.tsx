@@ -1,13 +1,13 @@
 import React, { Dispatch, SetStateAction } from "react";
+import { useNetwork } from "wagmi";
 
 interface IComponentProps {
-    // setShowUserInitiatedTxs: (show: boolean) => boolean;
     setShowUserInitiatedTxs: Dispatch<SetStateAction<boolean>>
 }
 const UserTxsToggle: React.FC<IComponentProps> = ({ setShowUserInitiatedTxs }) => {
-
+    const { chain } = useNetwork();
 	return (
-		<>
+		<div className="my-2">
 			<div
 				className='relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in'
 				onClick={() => setShowUserInitiatedTxs((s: boolean) => !s)}>
@@ -21,10 +21,12 @@ const UserTxsToggle: React.FC<IComponentProps> = ({ setShowUserInitiatedTxs }) =
 					htmlFor='toggle'
 					className='toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer'></label>
 			</div>
-			<label htmlFor='toggle' className='text-xs text-gray-700'>
+			<label htmlFor='toggle' className='text-xs text-white'>
 				Show my transactions
 			</label>
-		</>
+            {chain && <div className="text-white text-md">Connected network: {chain?.name}</div>}
+            
+		</div>
 	);
 };
 

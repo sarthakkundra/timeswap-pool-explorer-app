@@ -1,1 +1,1 @@
-export const supportedChainIds = [1, 42161];
+export const supportedChainIds = [1]; // Add 42161 (arbitrum chain id) to start supporting arbitrum

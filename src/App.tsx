@@ -1,5 +1,5 @@
-import { Web3Modal } from "@web3modal/react";
 import { useState } from "react";
+import { Web3Modal } from "@web3modal/react";
 import { useAccount } from "wagmi";
 import { Web3Button } from "@web3modal/react";
 import AllTransactions from "./pages/allTransactions";
@@ -20,8 +20,17 @@ function App() {
 
 	return (
 		<div className='bg-gradient-to-br w-screen h-screen flex flex-col justify-center items-center'>
-			<Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
+			<Web3Modal projectId={projectId} ethereumClient={ethereumClient} 
+			  themeVariables={{
+				'--w3m-accent-color': '#22283B',
+				'--w3m-accent-fill-color': 'white',
+				'--w3m-background-color': '#4a5577'
+			  }}
+			/>
+			<div className="my-4">
 			<Web3Button />
+
+			</div>
 			<div className='App '>
 				<div className='w-screen flex flex-col justify-center items-center'>
 					<PoolAddInput setPoolAdd={setPoolAdd} />
