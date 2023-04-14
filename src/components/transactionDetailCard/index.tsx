@@ -3,7 +3,6 @@ import { useNetwork } from "wagmi";
 import { getTokenPriceInUsd } from "../../common/api/coinGecko";
 import { ITransactionType } from "../../common/apiTypes";
 import { ethereum } from "../../constants/coinGeckoAssetPlatform";
-import ReactDOM from "react-dom";
 import Modal from "react-modal";
 
 const customStyles = {

@@ -11,6 +11,7 @@
   "dependencies": {
     "@apollo/client": "^3.7.11",
     "@moralisweb3/common-evm-utils": "^2.18.1",
+    "@types/react-modal": "^3.13.1",
     "@walletconnect/web3-provider": "^1.8.0",
     "@web3modal/ethereum": "^2.2.2",
     "@web3modal/react": "^2.2.2",
