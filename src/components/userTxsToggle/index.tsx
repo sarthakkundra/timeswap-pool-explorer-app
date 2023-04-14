@@ -9,13 +9,15 @@ const UserTxsToggle: React.FC<IComponentProps> = ({ setShowUserInitiatedTxs }) =
 	return (
 		<div className="my-2">
 			<div
-				className='relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in'
-				onClick={() => setShowUserInitiatedTxs((s: boolean) => !s)}>
+				className='relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in'>
 				<input
 					type='checkbox'
 					name='toggle'
 					id='toggle'
 					className='toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer'
+                    onClick={() => {
+                        setShowUserInitiatedTxs((s: boolean) => !s)
+                    }}
 				/>
 				<label
 					htmlFor='toggle'

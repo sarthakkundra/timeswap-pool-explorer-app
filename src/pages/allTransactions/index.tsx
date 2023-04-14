@@ -29,24 +29,38 @@ const AllTransactions: React.FC<IComponentProps> = ({
 			? LEND_AND_BORROW_TRANSACTIONS_BY_USER
 			: LEND_AND_BORROW_TRANSACTIONS
 	);
-	useEffect(() => {
-		getTxs({
-			variables: {
-				address: address,
-				poolAdd,
-			},
-		});
-	}, []);
+	// useEffect(() => {
+
+	// }, []);
+
+	// useEffect(() => {
+	// 	getTxs({
+	// 		variables: {
+	// 			address: address,
+	// 			poolAdd,
+	// 			skip: skipCounter,
+	// 		},
+	// 	});
+	// }, [skipCounter]);
 
 	useEffect(() => {
-		getTxs({
-			variables: {
-				address: address,
-				poolAdd,
-				skip: skipCounter,
-			},
-		});
-	}, [skipCounter]);
+		if(skipCounter) {
+			getTxs({
+				variables: {
+					address: address,
+					poolAdd,
+					skip: skipCounter,
+				},
+			});
+		} else {
+			getTxs({
+				variables: {
+					address: address,
+					poolAdd,
+				},
+			});
+		}
+	}, [skipCounter, showUserInitiatedTxs])
 
 	useEffect(() => {
 		if (data) {

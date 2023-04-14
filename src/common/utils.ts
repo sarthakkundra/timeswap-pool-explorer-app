@@ -21,6 +21,9 @@ export const getTokenNamesByAddresses = async (data: any) => {
 
     const chain = EvmChain.ETHEREUM;
 
+    if(!addresses || !addresses.length) {
+        return;
+    }
     const response: any = await Moralis.EvmApi.token.getTokenMetadata({
         addresses,
         chain,

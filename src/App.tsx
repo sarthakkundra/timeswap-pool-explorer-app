@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Web3Modal } from "@web3modal/react";
 import { useAccount } from "wagmi";
 import { Web3Button } from "@web3modal/react";
@@ -18,8 +18,12 @@ function App() {
 
 	const projectId = `${import.meta.env.VITE_WALLETCONNECT_PROJECT_ID}`;
 
+	useEffect(() => {
+		console.log("POOL ADDRESS ", poolAdd)
+	}, [poolAdd])
+
 	return (
-		<div className='bg-gradient-to-br w-screen h-screen flex flex-col justify-center items-center'>
+		<div className='bg-gradient-to-br w-screen flex flex-col justify-center items-center min-h-screen'>
 			<Web3Modal projectId={projectId} ethereumClient={ethereumClient} 
 			  themeVariables={{
 				'--w3m-accent-color': '#22283B',
