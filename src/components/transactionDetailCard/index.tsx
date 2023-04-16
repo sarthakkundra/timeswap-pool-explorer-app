@@ -47,11 +47,7 @@ const TransactionDetailCard: React.FC<IComponentProps> = ({
 	useEffect(() => {
 		getTokenAmountInUsd();
 	}, []);
-	useEffect(() => {
-		console.log("TOKEN PRICE ", tokenPriceInUsd);
-	}, [tokenPriceInUsd]);
-
-	console.log("TRANSACTION ", transaction, addressTokenMap);
+	
 	return (
 		// <div
 		// 	className='relative z-10'
@@ -69,6 +65,7 @@ const TransactionDetailCard: React.FC<IComponentProps> = ({
 		<Modal
 			isOpen={true}
 			onRequestClose={onClose}
+			// @ts-ignore - library issue
 			style={customStyles}
 			contentLabel='Transaction Details Modal'
 

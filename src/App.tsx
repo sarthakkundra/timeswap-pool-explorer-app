@@ -20,8 +20,8 @@ function App() {
 	const projectId = `${import.meta.env.VITE_WALLETCONNECT_PROJECT_ID}`;
 
 	useEffect(() => {
-		console.log("ADDRESS FILTER ", addressFilter);
-	}, [addressFilter]);
+		console.log("STATES ", showUserInitiatedTxs, addressFilter);
+	}, [showUserInitiatedTxs, addressFilter]);
 	return (
 		<div className='bg-gradient-to-br w-screen flex flex-col justify-center items-center min-h-screen'>
 			<Web3Modal
@@ -38,14 +38,8 @@ function App() {
 			</div>
 			<div className='App '>
 				<div className='w-screen flex flex-col justify-center items-center'>
-					<PoolAddInput setPoolAdd={setPoolAdd} filter={addressFilter} />
-					{!poolAdd && (
-						<UserTxsToggle
-							toggleType={TOGGLE_TYPE.addressType}
-							setAddressFilter={setAddressFilter}
-							currentAddressFilter={addressFilter}
-						/>
-					)}
+					<PoolAddInput setPoolAdd={setPoolAdd} />
+					{!poolAdd && <UserTxsToggle toggleType={TOGGLE_TYPE.addressType} />}
 					{poolAdd && address && (
 						<>
 							<UserTxsToggle
@@ -54,12 +48,12 @@ function App() {
 							/>
 							<button
 								className='bg-[#a0d2eb] px-2 py-1 text-black text-bold rounded-md mt-2'
-								onClick={() => window?.location?.reload()}>
+								onClick={() => window?.location?.replace(window?.location?.origin)}>
 								Change Filter
 							</button>
 
 							<AllTransactions
-								poolAdd={poolAdd}
+								filterAdd={poolAdd}
 								showUserInitiatedTxs={showUserInitiatedTxs}
 							/>
 						</>

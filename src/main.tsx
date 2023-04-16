@@ -7,17 +7,30 @@ import { ApolloProvider } from "@apollo/client";
 import client from "./apolloClient";
 import { WagmiConfig } from "wagmi";
 import wagmiClient from "./wagmiClient";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+	{
+		path: "/",
+		element: (
+			<>
+				<Helmet>
+					<meta charSet='utf-8' />
+					<title>Timeswap Pool Explorer</title>
+				</Helmet>
+				<WagmiConfig client={wagmiClient}>
+					<ApolloProvider client={client}>
+						<App />
+					</ApolloProvider>
+				</WagmiConfig>
+			</>
+		),
+
+	},
+]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 	<React.StrictMode>
-		<Helmet>
-			<meta charSet='utf-8' />
-			<title>Timeswap Pool Explorer</title>
-		</Helmet>
-		<WagmiConfig client={wagmiClient}>
-			<ApolloProvider client={client}>
-				<App />
-			</ApolloProvider>
-		</WagmiConfig>
+		<RouterProvider router={router} />
 	</React.StrictMode>
 );

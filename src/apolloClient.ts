@@ -1,9 +1,15 @@
-import { ApolloClient, InMemoryCache } from '@apollo/client';
+import { ApolloClient, InMemoryCache } from "@apollo/client";
 
+const selectedChainId = parseInt(location?.search?.split("=")[1]);
+console.log("SELECTED CHAIN ID ", selectedChainId)
+const graphEndpoint =
+	selectedChainId === 1
+		? import.meta.env.VITE_TIMESWAP_UNISWAP_PERIPHERY_ETHEREUM
+		: import.meta.env.VITE_TIMESWAP_UNISWAP_PERIPHERY_ARBITRUM;
 const client = new ApolloClient({
-    uri: `${import.meta.env.VITE_TIMESWAP_UNISWAP_PERIPHERY_ETHEREUM}`, //Conditionally use arbitrum url based on connected chain
-    cache: new InMemoryCache(),
-    connectToDevTools: true
+	uri: `${graphEndpoint}`,
+	cache: new InMemoryCache(),
+	connectToDevTools: true,
 });
 
 export default client;

@@ -1,4 +1,4 @@
-export const supportedChainIds = [1]; // Add 42161 (arbitrum chain id) to start supporting arbitrum
+export const supportedChainIds = [1, 42161]; // Add 42161 (arbitrum chain id) to start supporting arbitrum
 
 export enum ADDRESS_FILTERS {
     poolPair = "pool_pair",
